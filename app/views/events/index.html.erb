@@ -4,3 +4,8 @@
 	  <p class="item"><%= event.item %><p>
 	<% end %>
 </div>
+
+<%= form_for @event do |f| %>
+  <%= f.text_field :item %>
+  <%= f.submit "Add" %>
+<% end %>
