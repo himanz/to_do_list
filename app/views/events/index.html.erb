@@ -1,13 +1,13 @@
 <div class="list">
 	<h1 class="list_name"> To Do List </h1>
-	<ul>
+	<ul class="listTable">
 		<% @events.each do |event| %>
 		  <li class="item"><p class="itemText"><%= event.item %></p></li>
 		<% end %>
 	<ul>
 </div>
 
-<%= form_for @event do |f| %>
+<%= form_for (@event, :remote => true) do |f| %>
   <%= f.text_field :item %>
   <%= f.submit "Add" %>
 <% end %>

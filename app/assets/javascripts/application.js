@@ -16,5 +16,7 @@
 //= require_tree .
 
 $(document).ready(function() {
-  
+  $('.item').click(function() {
+    alert('CLICKED');
+  });
 });
