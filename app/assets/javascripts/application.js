@@ -19,4 +19,6 @@ $(document).ready(function() {
   $('.item').click(function() {
     alert('CLICKED');
   });
+
+  // <li class="item"><p class="itemText"><%= event.item %></p></li>
 });

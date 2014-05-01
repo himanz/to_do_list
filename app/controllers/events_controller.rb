@@ -13,10 +13,14 @@ class EventsController < ApplicationController
 
 	def create
 		@event = Event.new(events_params)
-		if @event.save
-			redirect_to events_path
-		else
-			render 'new'
+		respond_to do |format|
+			if @event.save
+				format.html { redirect_to events_path, notice: 'Event added.' }
+	      format.js {}
+			else
+	      format.html { render 'events/index', alert: 'There was an error.'  }
+	      format.js {}
+			end
 		end
 	end
 
