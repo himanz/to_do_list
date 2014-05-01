@@ -1,1 +1,4 @@
-<p> hello </p>
+<h1> To Do List </h1>
+<% @events.each do |event| %>
+  <%= event.item %>
+<% end %>
